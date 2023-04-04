@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Sales.API.Utility;
 using Sales.BLL.Services;
 using Sales.BLL.Services.Contract;
@@ -21,6 +22,7 @@ namespace Sales.API.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         [Route("Summary")]
         public async Task<IActionResult> Summary()
         {

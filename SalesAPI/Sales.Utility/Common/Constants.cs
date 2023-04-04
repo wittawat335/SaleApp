@@ -14,13 +14,13 @@ namespace Sales.Utility.Common
             public const string ConnectionStringSqlServer = "SqlServer";
             //JWT
             public const string JWT_Key = "AppSettings:JWT:key";
-            public const string JWT_ExpireTime = "AppSetting:JWT:ExpireTime";
-            public const string JWT_TokenDescriptor_Issuer = "AppSetting:JWT:TokenDescriptor:Issuer";
-            public const string JWT_TokenDescriptor_Audience = "AppSetting:JWT:TokenDescriptor:Audience";
+            public const string JWT_ExpireTime = "AppSettings:JWT:ExpireTime";
+            public const string JWT_TokenDescriptor_Issuer = "AppSettings:JWT:TokenDescriptor:Issuer";
+            public const string JWT_TokenDescriptor_Audience = "AppSettings:JWT:TokenDescriptor:Audience";
             //DateFormat
-            public const string DateFormat = "AppSetting:DateFormat";
+            public const string DateFormat = "AppSettings:DateFormat";
             //Port Url
-            public const string Client_URL = "AppSetting:Client_URL";
+            public const string Client_URL = "AppSettings:Client_URL";
         }
         public struct StatusMessage
         {

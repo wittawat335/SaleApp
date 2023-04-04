@@ -1,6 +1,7 @@
 import { NgModule, Component } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, CanActivate } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
+import { AuthGuard } from './shared/services/auth/auth.guard';
 
 const routes: Routes = [
   { path: '', component: LoginComponent, pathMatch: 'full' },
@@ -9,6 +10,7 @@ const routes: Routes = [
     path: 'pages',
     loadChildren: () =>
       import('./components/layout/layout.module').then((m) => m.LayoutModule),
+    canActivate: [AuthGuard],
   },
   { path: '**', redirectTo: 'login', pathMatch: 'full' },
 ];

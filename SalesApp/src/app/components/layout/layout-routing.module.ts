@@ -7,13 +7,18 @@ import { SaleHistoryComponent } from './pages/sale-history/sale-history.componen
 import { SaleComponent } from './pages/sale/sale.component';
 import { UserComponent } from './pages/user/user.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { AuthGuard } from 'src/app/shared/services/auth/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
     component: LayoutComponent,
     children: [
-      { path: 'dashboard', component: DashboardComponent },
+      {
+        path: 'dashboard',
+        component: DashboardComponent,
+        canActivate: [AuthGuard],
+      },
       { path: 'user', component: UserComponent },
       { path: 'product', component: ProductComponent },
       { path: 'sale', component: SaleComponent },
