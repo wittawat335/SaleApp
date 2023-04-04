@@ -9,9 +9,7 @@ namespace Sales.Utility.Common
     public static class Constants
     {
         public struct AppSettings
-        {
-            //ConnectionString
-            public const string ConnectionStringSqlServer = "SqlServer";
+        {         
             //JWT
             public const string JWT_Key = "AppSettings:JWT:key";
             public const string JWT_ExpireTime = "AppSettings:JWT:ExpireTime";
@@ -21,6 +19,12 @@ namespace Sales.Utility.Common
             public const string DateFormat = "AppSettings:DateFormat";
             //Port Url
             public const string Client_URL = "AppSettings:Client_URL";
+        }
+
+        public struct ConnnectionString
+        {
+            public const string SqlServer = "SqlServer";
+            public const string SqlServerToAzure = "SqlServerToAzure";
         }
         public struct StatusMessage
         {

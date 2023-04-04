@@ -23,7 +23,7 @@ namespace Sales.IOC
         {
             services.AddDbContext<DbsalesContext>(options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString(Constants.AppSettings.ConnectionStringSqlServer));
+                options.UseSqlServer(configuration.GetConnectionString(Constants.ConnnectionString.SqlServerToAzure));
             });
 
             services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));

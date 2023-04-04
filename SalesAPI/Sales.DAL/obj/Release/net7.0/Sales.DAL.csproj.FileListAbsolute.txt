@@ -1,0 +1,15 @@
+F:\Project 2023\Angular\Sale\SalesAPI\Sales.DAL\bin\Release\net7.0\Sales.DAL.deps.json
+F:\Project 2023\Angular\Sale\SalesAPI\Sales.DAL\bin\Release\net7.0\Sales.DAL.dll
+F:\Project 2023\Angular\Sale\SalesAPI\Sales.DAL\bin\Release\net7.0\Sales.DAL.pdb
+F:\Project 2023\Angular\Sale\SalesAPI\Sales.DAL\bin\Release\net7.0\Sales.Model.dll
+F:\Project 2023\Angular\Sale\SalesAPI\Sales.DAL\bin\Release\net7.0\Sales.Model.pdb
+F:\Project 2023\Angular\Sale\SalesAPI\Sales.DAL\obj\Release\net7.0\Sales.DAL.csproj.AssemblyReference.cache
+F:\Project 2023\Angular\Sale\SalesAPI\Sales.DAL\obj\Release\net7.0\Sales.DAL.GeneratedMSBuildEditorConfig.editorconfig
+F:\Project 2023\Angular\Sale\SalesAPI\Sales.DAL\obj\Release\net7.0\Sales.DAL.AssemblyInfoInputs.cache
+F:\Project 2023\Angular\Sale\SalesAPI\Sales.DAL\obj\Release\net7.0\Sales.DAL.AssemblyInfo.cs
+F:\Project 2023\Angular\Sale\SalesAPI\Sales.DAL\obj\Release\net7.0\Sales.DAL.csproj.CoreCompileInputs.cache
+F:\Project 2023\Angular\Sale\SalesAPI\Sales.DAL\obj\Release\net7.0\Sales.DAL.csproj.CopyComplete
+F:\Project 2023\Angular\Sale\SalesAPI\Sales.DAL\obj\Release\net7.0\Sales.DAL.dll
+F:\Project 2023\Angular\Sale\SalesAPI\Sales.DAL\obj\Release\net7.0\refint\Sales.DAL.dll
+F:\Project 2023\Angular\Sale\SalesAPI\Sales.DAL\obj\Release\net7.0\Sales.DAL.pdb
+F:\Project 2023\Angular\Sale\SalesAPI\Sales.DAL\obj\Release\net7.0\ref\Sales.DAL.dll
