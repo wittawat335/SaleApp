@@ -14,6 +14,7 @@ namespace Sales.DTO
         public int? IdRole { get; set; }
         public string? RoleName { get; set; }
         public string? Password { get; set; }
+        public string? PasswordHash { get; set; }
         public int? IsActive { get; set; }
     }
 }

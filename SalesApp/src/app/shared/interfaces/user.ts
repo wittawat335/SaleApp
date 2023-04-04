@@ -5,5 +5,6 @@ export interface User {
   idRole: number;
   roleName?: string;
   password: string;
+  passwordHash?: string;
   isActive: number;
 }

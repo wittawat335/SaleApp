@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Project 2023\\Angular\\SaleApp\\SalesAPI\\Sales.Utility\\Sales.Utility.csproj": {}
+    "F:\\Project 2023\\Angular\\Sale\\SalesAPI\\Sales.Utility\\Sales.Utility.csproj": {}
   },
   "projects": {
-    "F:\\Project 2023\\Angular\\SaleApp\\SalesAPI\\Sales.DTO\\Sales.DTO.csproj": {
+    "F:\\Project 2023\\Angular\\Sale\\SalesAPI\\Sales.DTO\\Sales.DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Project 2023\\Angular\\SaleApp\\SalesAPI\\Sales.DTO\\Sales.DTO.csproj",
+        "projectUniqueName": "F:\\Project 2023\\Angular\\Sale\\SalesAPI\\Sales.DTO\\Sales.DTO.csproj",
         "projectName": "Sales.DTO",
-        "projectPath": "F:\\Project 2023\\Angular\\SaleApp\\SalesAPI\\Sales.DTO\\Sales.DTO.csproj",
+        "projectPath": "F:\\Project 2023\\Angular\\Sale\\SalesAPI\\Sales.DTO\\Sales.DTO.csproj",
         "packagesPath": "C:\\Users\\Wittawat\\.nuget\\packages\\",
-        "outputPath": "F:\\Project 2023\\Angular\\SaleApp\\SalesAPI\\Sales.DTO\\obj\\",
+        "outputPath": "F:\\Project 2023\\Angular\\Sale\\SalesAPI\\Sales.DTO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -62,14 +62,14 @@
         }
       }
     },
-    "F:\\Project 2023\\Angular\\SaleApp\\SalesAPI\\Sales.Model\\Sales.Model.csproj": {
+    "F:\\Project 2023\\Angular\\Sale\\SalesAPI\\Sales.Model\\Sales.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Project 2023\\Angular\\SaleApp\\SalesAPI\\Sales.Model\\Sales.Model.csproj",
+        "projectUniqueName": "F:\\Project 2023\\Angular\\Sale\\SalesAPI\\Sales.Model\\Sales.Model.csproj",
         "projectName": "Sales.Model",
-        "projectPath": "F:\\Project 2023\\Angular\\SaleApp\\SalesAPI\\Sales.Model\\Sales.Model.csproj",
+        "projectPath": "F:\\Project 2023\\Angular\\Sale\\SalesAPI\\Sales.Model\\Sales.Model.csproj",
         "packagesPath": "C:\\Users\\Wittawat\\.nuget\\packages\\",
-        "outputPath": "F:\\Project 2023\\Angular\\SaleApp\\SalesAPI\\Sales.Model\\obj\\",
+        "outputPath": "F:\\Project 2023\\Angular\\Sale\\SalesAPI\\Sales.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -132,14 +132,14 @@
         }
       }
     },
-    "F:\\Project 2023\\Angular\\SaleApp\\SalesAPI\\Sales.Utility\\Sales.Utility.csproj": {
+    "F:\\Project 2023\\Angular\\Sale\\SalesAPI\\Sales.Utility\\Sales.Utility.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Project 2023\\Angular\\SaleApp\\SalesAPI\\Sales.Utility\\Sales.Utility.csproj",
+        "projectUniqueName": "F:\\Project 2023\\Angular\\Sale\\SalesAPI\\Sales.Utility\\Sales.Utility.csproj",
         "projectName": "Sales.Utility",
-        "projectPath": "F:\\Project 2023\\Angular\\SaleApp\\SalesAPI\\Sales.Utility\\Sales.Utility.csproj",
+        "projectPath": "F:\\Project 2023\\Angular\\Sale\\SalesAPI\\Sales.Utility\\Sales.Utility.csproj",
         "packagesPath": "C:\\Users\\Wittawat\\.nuget\\packages\\",
-        "outputPath": "F:\\Project 2023\\Angular\\SaleApp\\SalesAPI\\Sales.Utility\\obj\\",
+        "outputPath": "F:\\Project 2023\\Angular\\Sale\\SalesAPI\\Sales.Utility\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -159,11 +159,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "F:\\Project 2023\\Angular\\SaleApp\\SalesAPI\\Sales.DTO\\Sales.DTO.csproj": {
-                "projectPath": "F:\\Project 2023\\Angular\\SaleApp\\SalesAPI\\Sales.DTO\\Sales.DTO.csproj"
+              "F:\\Project 2023\\Angular\\Sale\\SalesAPI\\Sales.DTO\\Sales.DTO.csproj": {
+                "projectPath": "F:\\Project 2023\\Angular\\Sale\\SalesAPI\\Sales.DTO\\Sales.DTO.csproj"
               },
-              "F:\\Project 2023\\Angular\\SaleApp\\SalesAPI\\Sales.Model\\Sales.Model.csproj": {
-                "projectPath": "F:\\Project 2023\\Angular\\SaleApp\\SalesAPI\\Sales.Model\\Sales.Model.csproj"
+              "F:\\Project 2023\\Angular\\Sale\\SalesAPI\\Sales.Model\\Sales.Model.csproj": {
+                "projectPath": "F:\\Project 2023\\Angular\\Sale\\SalesAPI\\Sales.Model\\Sales.Model.csproj"
               }
             }
           }

@@ -75,7 +75,6 @@ export class UserDialogComponent implements OnInit {
     if (this.dataUser == null) {
       this.userService.Register(userData).subscribe({
         next: (data) => {
-          console.log(data);
           if (data.status) {
             this.utService.showAlert(data.message, 'success');
             this.dialog.close('true');

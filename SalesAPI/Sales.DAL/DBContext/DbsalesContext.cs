@@ -35,7 +35,8 @@ public partial class DbsalesContext : DbContext
     public virtual DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    { }
+
+        {}
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -97,6 +98,9 @@ public partial class DbsalesContext : DbContext
             entity.ToTable("Product");
 
             entity.Property(e => e.ProductId).HasColumnName("ProductID");
+            entity.Property(e => e.CreateDate)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
             entity.Property(e => e.IdCategory).HasColumnName("idCategory");
             entity.Property(e => e.IsActive)
                 .HasDefaultValueSql("((1))")
@@ -105,10 +109,6 @@ public partial class DbsalesContext : DbContext
                 .HasMaxLength(100)
                 .IsUnicode(false);
             entity.Property(e => e.Price).HasColumnType("decimal(10, 2)");
-            entity.Property(e => e.RecordDate)
-                .HasDefaultValueSql("(getdate())")
-                .HasColumnType("datetime")
-                .HasColumnName("recordDate");
 
             entity.HasOne(d => d.IdCategoryNavigation).WithMany(p => p.Products)
                 .HasForeignKey(d => d.IdCategory)
@@ -122,13 +122,12 @@ public partial class DbsalesContext : DbContext
             entity.ToTable("Role");
 
             entity.Property(e => e.RoleId).HasColumnName("RoleID");
+            entity.Property(e => e.CreateDate)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
             entity.Property(e => e.Name)
                 .HasMaxLength(50)
                 .IsUnicode(false);
-            entity.Property(e => e.RecordDate)
-                .HasDefaultValueSql("(getdate())")
-                .HasColumnType("datetime")
-                .HasColumnName("recordDate");
         });
 
         modelBuilder.Entity<RoleMenu>(entity =>
@@ -163,8 +162,7 @@ public partial class DbsalesContext : DbContext
                 .HasColumnName("documentNumber");
             entity.Property(e => e.PaymentType)
                 .HasMaxLength(50)
-                .IsUnicode(false)
-                .HasColumnName("paymentType");
+                .IsUnicode(false);
             entity.Property(e => e.RecordDate)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime")
@@ -198,19 +196,16 @@ public partial class DbsalesContext : DbContext
             entity.HasKey(e => e.UserId).HasName("PK__Users__CBA1B257B8A56B44");
 
             entity.Property(e => e.UserId).HasColumnName("UserID");
+            entity.Property(e => e.CreateDate)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
             entity.Property(e => e.Email).HasMaxLength(50);
-            entity.Property(e => e.FullName)
-                .HasMaxLength(100)
-                .HasColumnName("fullName");
+            entity.Property(e => e.FullName).HasMaxLength(100);
             entity.Property(e => e.IdRole).HasColumnName("idRole");
             entity.Property(e => e.IsActive)
                 .HasDefaultValueSql("((1))")
                 .HasColumnName("isActive");
             entity.Property(e => e.Password).HasMaxLength(50);
-            entity.Property(e => e.RecordDate)
-                .HasDefaultValueSql("(getdate())")
-                .HasColumnType("datetime")
-                .HasColumnName("recordDate");
 
             entity.HasOne(d => d.IdRoleNavigation).WithMany(p => p.Users)
                 .HasForeignKey(d => d.IdRole)

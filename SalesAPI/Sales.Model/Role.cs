@@ -9,7 +9,7 @@ public partial class Role
 
     public string? Name { get; set; }
 
-    public DateTime? RecordDate { get; set; }
+    public DateTime? CreateDate { get; set; }
 
     public virtual ICollection<RoleMenu> RoleMenus { get; } = new List<RoleMenu>();
 

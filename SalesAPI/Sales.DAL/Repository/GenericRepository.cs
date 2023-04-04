@@ -20,7 +20,7 @@ namespace Sales.DAL.Repository
             _dbContext = dbContext;
         }
 
-        public async Task<TModel> Search(Expression<Func<TModel, bool>> filter)
+        public async Task<TModel> GetFirst(Expression<Func<TModel, bool>> filter)
         {
             try
             {

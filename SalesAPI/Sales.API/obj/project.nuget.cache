@@ -1,13 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "SkoRl0eREM3P1DDSoBjQz6IHvaLfSNoYUmSPufCkMg5GDxBKKJVWfvx/EqKxTSbxENMLid5sYih18rTzS1VF5Q==",
+  "dgSpecHash": "s3yh/fo0RRWnybd1D1A1kqxS5vpREA8S269JYqwW3xLfVWc0j4xYj+6IK044DO92oOziB9tHjo+HOrCH+bUaeA==",
   "success": true,
-  "projectFilePath": "F:\\Project 2023\\Angular\\SaleApp\\SalesAPI\\Sales.API\\Sales.API.csproj",
+  "projectFilePath": "F:\\Project 2023\\Angular\\Sale\\SalesAPI\\Sales.API\\Sales.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Wittawat\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Wittawat\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
     "C:\\Users\\Wittawat\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Wittawat\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\Wittawat\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
+    "C:\\Users\\Wittawat\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.4\\microsoft.aspnetcore.authentication.jwtbearer.7.0.4.nupkg.sha512",
     "C:\\Users\\Wittawat\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.4\\microsoft.aspnetcore.openapi.7.0.4.nupkg.sha512",
     "C:\\Users\\Wittawat\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Wittawat\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

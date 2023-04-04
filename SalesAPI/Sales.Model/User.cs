@@ -17,7 +17,11 @@ public partial class User
 
     public bool? IsActive { get; set; }
 
-    public DateTime? RecordDate { get; set; }
+    public DateTime? CreateDate { get; set; }
+
+    public string? PasswordHash { get; set; }
+
+    public string? Token { get; set; }
 
     public virtual Role? IdRoleNavigation { get; set; }
 }

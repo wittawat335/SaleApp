@@ -14,10 +14,12 @@ namespace Sales.API.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
+        private readonly IConfiguration _configuration;
 
-        public UserController(IUserService userService)
+        public UserController(IUserService userService, IConfiguration configuration)
         {
             _userService = userService;
+            _configuration = configuration;
         }
 
         // GET: api/<UserController>
@@ -46,7 +48,8 @@ namespace Sales.API.Controllers
             var response = new Response<SessionDTO>();
             try
             {
-                response.value = await _userService.Login(login.Email, login.Password);
+                string key = _configuration.GetSection(Constants.AppSettings.JWT_Key).Value!;
+                response.value = await _userService.Login(login.Email!, login.Password!, key);
                 response.status = Constants.Status.True;
             }
             catch (Exception ex){

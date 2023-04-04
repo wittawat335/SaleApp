@@ -13,6 +13,6 @@ namespace Sales.BLL.Services.Contract
         Task<UserDTO> Create(UserDTO model);
         Task<bool> Update(UserDTO model);
         Task<bool> Delete(int id);
-        Task<SessionDTO> Login(string email, string password);
+        Task<SessionDTO> Login(string email, string password, string key);
     }
 }

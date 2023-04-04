@@ -1,5 +1,8 @@
 ﻿using AutoMapper;
+using BCrypt.Net;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.IdentityModel.Tokens;
 using Sales.BLL.Services.Contract;
 using Sales.DAL.Repository.Contract;
 using Sales.DTO;
@@ -7,8 +10,10 @@ using Sales.Model;
 using Sales.Utility.Common;
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Reflection.Metadata;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
@@ -41,17 +46,50 @@ namespace Sales.BLL.Services
             }
         }
 
-        public async Task<SessionDTO> Login(string email, string password)
+        public async Task<SessionDTO> Login(string email, string password, string key)
         {
             try
             {
+                //var user = await _repository.GetFirst(x => x.Email == email);
+                //if (user == null || !BCrypt.Net.BCrypt.Verify(password, user.PasswordHash))
+                //    throw new TaskCanceledException("Username or password is incorrect");
+
                 var query = await _repository.GetList(x => x.Email == email && x.Password == password);
                 if (query.FirstOrDefault() == null)
                     throw new TaskCanceledException(Constants.StatusMessage.No_Data);
 
                 User checkUser = query.Include(x => x.IdRoleNavigation).First();
-
+                checkUser.Token = CreateToken(checkUser, key);
+               
                 return _mapper.Map<SessionDTO>(checkUser);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public string CreateToken(User user, string key)
+        {
+            try
+            {
+                List<Claim> claims = new List<Claim>
+                {
+                    new Claim("UserId", user.UserId.ToString()),
+                    new Claim("FullName", user.FullName!),
+                    new Claim("Email", user.Email!),
+                };
+
+                var symmetrickey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key));
+                var cred = new SigningCredentials(symmetrickey, SecurityAlgorithms.HmacSha512Signature);
+                var token = new JwtSecurityToken(
+                    claims: claims,
+                    expires: DateTime.Now.AddDays(1),
+                    signingCredentials: cred
+                    );
+                var jwt = new JwtSecurityTokenHandler().WriteToken(token);
+
+                return jwt;
             }
             catch
             {
@@ -63,11 +101,15 @@ namespace Sales.BLL.Services
         {
             try
             {
+                var checkDuplicate = await _repository.GetList(x => x.Email == model.Email);
+                if (checkDuplicate.FirstOrDefault() != null)
+                    throw new TaskCanceledException("Email '" + model.Email + "' is already taken");
+
+                model.PasswordHash = BCrypt.Net.BCrypt.HashPassword(model.Password);
                 var createUser = await _repository.Create(_mapper.Map<User>(model));
                 if (createUser.UserId == 0)
-                {
                     throw new TaskCanceledException(Constants.StatusMessage.Could_Not_Create);
-                }
+                
                 var query = await _repository.GetList(x => x.UserId == createUser.UserId);
                 createUser = query.Include(x => x.IdRoleNavigation).First();
 
@@ -83,7 +125,7 @@ namespace Sales.BLL.Services
             try
             {
                 var userMap = _mapper.Map<User>(model);
-                var UpdateUser = await _repository.Search(x => x.UserId == userMap.UserId);
+                var UpdateUser = await _repository.GetFirst(x => x.UserId == userMap.UserId);
                 if (UpdateUser == null)
                     throw new TaskCanceledException(Constants.StatusMessage.No_Data);
 
@@ -91,6 +133,7 @@ namespace Sales.BLL.Services
                 UpdateUser.Email = userMap.Email;
                 UpdateUser.IdRole = userMap.IdRole;
                 UpdateUser.Password = userMap.Password;
+                //UpdateUser.PasswordHash = BCrypt.Net.BCrypt.HashPassword(userMap.Password);
                 UpdateUser.IsActive = userMap.IsActive;
 
                 bool updated = await _repository.Update(UpdateUser);
@@ -109,7 +152,7 @@ namespace Sales.BLL.Services
         {
             try
             {
-                var query = await _repository.Search(x => x.UserId == id);
+                var query = await _repository.GetFirst(x => x.UserId == id);
                 if (query == null)
                     throw new TaskCanceledException(Constants.StatusMessage.No_Data);
 

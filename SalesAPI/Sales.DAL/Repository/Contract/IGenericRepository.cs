@@ -9,7 +9,7 @@ namespace Sales.DAL.Repository.Contract
 {
     public interface IGenericRepository<TModel> where TModel : class
     {
-        Task<TModel> Search(Expression<Func<TModel, bool>> filter);
+        Task<TModel> GetFirst(Expression<Func<TModel, bool>> filter);
         Task<IQueryable<TModel>> GetList(Expression<Func<TModel, bool>> filter = null);
         Task<TModel> Create(TModel model);
         Task<bool> Update(TModel model);

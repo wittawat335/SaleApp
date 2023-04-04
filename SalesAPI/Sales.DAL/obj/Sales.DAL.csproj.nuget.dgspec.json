@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Project 2023\\Angular\\SaleApp\\SalesAPI\\Sales.DAL\\Sales.DAL.csproj": {}
+    "F:\\Project 2023\\Angular\\Sale\\SalesAPI\\Sales.DAL\\Sales.DAL.csproj": {}
   },
   "projects": {
-    "F:\\Project 2023\\Angular\\SaleApp\\SalesAPI\\Sales.DAL\\Sales.DAL.csproj": {
+    "F:\\Project 2023\\Angular\\Sale\\SalesAPI\\Sales.DAL\\Sales.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Project 2023\\Angular\\SaleApp\\SalesAPI\\Sales.DAL\\Sales.DAL.csproj",
+        "projectUniqueName": "F:\\Project 2023\\Angular\\Sale\\SalesAPI\\Sales.DAL\\Sales.DAL.csproj",
         "projectName": "Sales.DAL",
-        "projectPath": "F:\\Project 2023\\Angular\\SaleApp\\SalesAPI\\Sales.DAL\\Sales.DAL.csproj",
+        "projectPath": "F:\\Project 2023\\Angular\\Sale\\SalesAPI\\Sales.DAL\\Sales.DAL.csproj",
         "packagesPath": "C:\\Users\\Wittawat\\.nuget\\packages\\",
-        "outputPath": "F:\\Project 2023\\Angular\\SaleApp\\SalesAPI\\Sales.DAL\\obj\\",
+        "outputPath": "F:\\Project 2023\\Angular\\Sale\\SalesAPI\\Sales.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -31,8 +31,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "F:\\Project 2023\\Angular\\SaleApp\\SalesAPI\\Sales.Model\\Sales.Model.csproj": {
-                "projectPath": "F:\\Project 2023\\Angular\\SaleApp\\SalesAPI\\Sales.Model\\Sales.Model.csproj"
+              "F:\\Project 2023\\Angular\\Sale\\SalesAPI\\Sales.Model\\Sales.Model.csproj": {
+                "projectPath": "F:\\Project 2023\\Angular\\Sale\\SalesAPI\\Sales.Model\\Sales.Model.csproj"
               }
             }
           }
@@ -66,14 +66,14 @@
         }
       }
     },
-    "F:\\Project 2023\\Angular\\SaleApp\\SalesAPI\\Sales.Model\\Sales.Model.csproj": {
+    "F:\\Project 2023\\Angular\\Sale\\SalesAPI\\Sales.Model\\Sales.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Project 2023\\Angular\\SaleApp\\SalesAPI\\Sales.Model\\Sales.Model.csproj",
+        "projectUniqueName": "F:\\Project 2023\\Angular\\Sale\\SalesAPI\\Sales.Model\\Sales.Model.csproj",
         "projectName": "Sales.Model",
-        "projectPath": "F:\\Project 2023\\Angular\\SaleApp\\SalesAPI\\Sales.Model\\Sales.Model.csproj",
+        "projectPath": "F:\\Project 2023\\Angular\\Sale\\SalesAPI\\Sales.Model\\Sales.Model.csproj",
         "packagesPath": "C:\\Users\\Wittawat\\.nuget\\packages\\",
-        "outputPath": "F:\\Project 2023\\Angular\\SaleApp\\SalesAPI\\Sales.Model\\obj\\",
+        "outputPath": "F:\\Project 2023\\Angular\\Sale\\SalesAPI\\Sales.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

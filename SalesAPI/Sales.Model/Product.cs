@@ -17,7 +17,7 @@ public partial class Product
 
     public bool? IsActive { get; set; }
 
-    public DateTime? RecordDate { get; set; }
+    public DateTime? CreateDate { get; set; }
 
     public virtual Category? IdCategoryNavigation { get; set; }
 

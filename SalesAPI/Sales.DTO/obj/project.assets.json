@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Project 2023\\Angular\\SaleApp\\SalesAPI\\Sales.DTO\\Sales.DTO.csproj",
+      "projectUniqueName": "F:\\Project 2023\\Angular\\Sale\\SalesAPI\\Sales.DTO\\Sales.DTO.csproj",
       "projectName": "Sales.DTO",
-      "projectPath": "F:\\Project 2023\\Angular\\SaleApp\\SalesAPI\\Sales.DTO\\Sales.DTO.csproj",
+      "projectPath": "F:\\Project 2023\\Angular\\Sale\\SalesAPI\\Sales.DTO\\Sales.DTO.csproj",
       "packagesPath": "C:\\Users\\Wittawat\\.nuget\\packages\\",
-      "outputPath": "F:\\Project 2023\\Angular\\SaleApp\\SalesAPI\\Sales.DTO\\obj\\",
+      "outputPath": "F:\\Project 2023\\Angular\\Sale\\SalesAPI\\Sales.DTO\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

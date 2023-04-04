@@ -3,4 +3,5 @@ export interface Session {
   fullName: string;
   email: string;
   roleName: string;
+  token: string;
 }

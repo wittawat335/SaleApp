@@ -63,7 +63,7 @@ namespace Sales.BLL.Services
             try
             {
                 var mapper = _mapper.Map<Product>(model);
-                var dataUpdate = await _repository.Search(x => x.ProductId == mapper.ProductId);
+                var dataUpdate = await _repository.GetFirst(x => x.ProductId == mapper.ProductId);
                 if (dataUpdate == null)
                     throw new TaskCanceledException(Constants.StatusMessage.No_Data);
 
@@ -89,7 +89,7 @@ namespace Sales.BLL.Services
         {
             try
             {
-                var query = await _repository.Search(x => x.ProductId == id);
+                var query = await _repository.GetFirst(x => x.ProductId == id);
                 if (query == null)
                     throw new TaskCanceledException(Constants.StatusMessage.No_Data);
 

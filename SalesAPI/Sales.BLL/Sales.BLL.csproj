@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Sales.DAL\Sales.DAL.csproj" />
     <ProjectReference Include="..\Sales.DTO\Sales.DTO.csproj" />
     <ProjectReference Include="..\Sales.Model\Sales.Model.csproj" />

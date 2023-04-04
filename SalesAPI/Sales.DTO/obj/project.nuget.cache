@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iWBhKWfRiL1x+rUeORl6D5UjS/aDbfEX+A0fDNIITlWU0WBZlEsXmbuUTWv8pNJlJVN5Pi2tNbnHyYMV8328hA==",
+  "dgSpecHash": "uA4ygptVJt/fA9mmdwejv444VMT6/y1L+jfc3wlbZdVdMRPQB+PEfW9H3A21ddpDiqwIbRltfq0mmbSoCi3bng==",
   "success": true,
-  "projectFilePath": "F:\\Project 2023\\Angular\\SaleApp\\SalesAPI\\Sales.DTO\\Sales.DTO.csproj",
+  "projectFilePath": "F:\\Project 2023\\Angular\\Sale\\SalesAPI\\Sales.DTO\\Sales.DTO.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

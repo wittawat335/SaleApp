@@ -22,3 +22,15 @@ F:\Project 2023\Angular\SaleApp\SalesAPI\Sales.DTO\obj\Debug\net7.0\Sales.DTO.dl
 F:\Project 2023\Angular\SaleApp\SalesAPI\Sales.DTO\obj\Debug\net7.0\refint\Sales.DTO.dll
 F:\Project 2023\Angular\SaleApp\SalesAPI\Sales.DTO\obj\Debug\net7.0\Sales.DTO.pdb
 F:\Project 2023\Angular\SaleApp\SalesAPI\Sales.DTO\obj\Debug\net7.0\ref\Sales.DTO.dll
+F:\Project 2023\Angular\Sale\SalesAPI\Sales.DTO\bin\Debug\net7.0\Sales.DTO.deps.json
+F:\Project 2023\Angular\Sale\SalesAPI\Sales.DTO\bin\Debug\net7.0\Sales.DTO.dll
+F:\Project 2023\Angular\Sale\SalesAPI\Sales.DTO\bin\Debug\net7.0\Sales.DTO.pdb
+F:\Project 2023\Angular\Sale\SalesAPI\Sales.DTO\obj\Debug\net7.0\Sales.DTO.csproj.AssemblyReference.cache
+F:\Project 2023\Angular\Sale\SalesAPI\Sales.DTO\obj\Debug\net7.0\Sales.DTO.GeneratedMSBuildEditorConfig.editorconfig
+F:\Project 2023\Angular\Sale\SalesAPI\Sales.DTO\obj\Debug\net7.0\Sales.DTO.AssemblyInfoInputs.cache
+F:\Project 2023\Angular\Sale\SalesAPI\Sales.DTO\obj\Debug\net7.0\Sales.DTO.AssemblyInfo.cs
+F:\Project 2023\Angular\Sale\SalesAPI\Sales.DTO\obj\Debug\net7.0\Sales.DTO.csproj.CoreCompileInputs.cache
+F:\Project 2023\Angular\Sale\SalesAPI\Sales.DTO\obj\Debug\net7.0\Sales.DTO.dll
+F:\Project 2023\Angular\Sale\SalesAPI\Sales.DTO\obj\Debug\net7.0\refint\Sales.DTO.dll
+F:\Project 2023\Angular\Sale\SalesAPI\Sales.DTO\obj\Debug\net7.0\Sales.DTO.pdb
+F:\Project 2023\Angular\Sale\SalesAPI\Sales.DTO\obj\Debug\net7.0\ref\Sales.DTO.dll
