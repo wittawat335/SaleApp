@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/76c4ea33-2631-4b99-b414-646238552e0f/resourceGroups/rg1/providers/Microsoft.Web/sites/SaleAppClient",
+    "appService.deploySubpath": "dist\\sales-app"
+}

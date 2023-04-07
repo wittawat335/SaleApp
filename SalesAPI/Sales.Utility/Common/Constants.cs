@@ -35,6 +35,7 @@ namespace Sales.Utility.Common
             public const string Duplicate_User = "User is Duplicate";
             public const string Cannot_Update_Data = "Cannot Update Data";
             public const string Cannot_Map_Data = "Cannot Map Data";
+            public const string InActive = "This username is inactive";
             public const string Create_Action = "Successfully Created";
             public const string Update_Action = "Successfully Updated";
             public const string Delete_Action = "Successfully Deleted";

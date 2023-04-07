@@ -11,6 +11,6 @@ namespace Sales.DTO
         public int SalesTotal { get; set; }
         public string? TotalIncome { get; set; }
         public int TotalProduct { get; set; }
-        public List<SalesWeekDTO> listSalesWeek { get; set; }
+        public List<SalesWeekDTO>? listSalesWeek { get; set; }
     }
 }

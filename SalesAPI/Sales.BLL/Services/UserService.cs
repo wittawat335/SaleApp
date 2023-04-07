@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BCrypt.Net;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.IdentityModel.Tokens;
@@ -23,12 +24,14 @@ namespace Sales.BLL.Services
     public class UserService : IUserService
     {
         private readonly IGenericRepository<User> _repository;
+        private readonly IPasswordHasService _service;
         private readonly IMapper _mapper;
 
-        public UserService(IGenericRepository<User> repository, IMapper mapper)
+        public UserService(IGenericRepository<User> repository, IPasswordHasService service, IMapper mapper)
         {
             _repository = repository;
             _mapper = mapper;
+            _service = service;
         }
 
         public async Task<List<UserDTO>> GetList()
@@ -50,17 +53,22 @@ namespace Sales.BLL.Services
         {
             try
             {
-                //var user = await _repository.GetFirst(x => x.Email == email);
-                //if (user == null || !BCrypt.Net.BCrypt.Verify(password, user.PasswordHash))
-                //    throw new TaskCanceledException("Username or password is incorrect");
+                var user = await _repository.GetFirst(x => x.Email == email);
+                var verifyPassword = _service.Verify(user.PasswordHash, password);
+
+                if (user == null || !verifyPassword)
+                    throw new TaskCanceledException("Username or password is incorrect");
 
                 var query = await _repository.GetList(x => x.Email == email && x.Password == password);
                 if (query.FirstOrDefault() == null)
                     throw new TaskCanceledException(Constants.StatusMessage.No_Data);
 
                 User checkUser = query.Include(x => x.IdRoleNavigation).First();
-                checkUser.Token = CreateToken(checkUser, key);
-               
+                if(checkUser.IsActive == true)
+                    checkUser.Token = CreateToken(checkUser, key);
+                else
+                    throw new TaskCanceledException(Constants.StatusMessage.InActive);
+
                 return _mapper.Map<SessionDTO>(checkUser);
             }
             catch
@@ -105,7 +113,7 @@ namespace Sales.BLL.Services
                 if (checkDuplicate.FirstOrDefault() != null)
                     throw new TaskCanceledException("Email '" + model.Email + "' is already taken");
 
-                model.PasswordHash = BCrypt.Net.BCrypt.HashPassword(model.Password);
+                model.PasswordHash = _service.Hash(model.Password);
                 var createUser = await _repository.Create(_mapper.Map<User>(model));
                 if (createUser.UserId == 0)
                     throw new TaskCanceledException(Constants.StatusMessage.Could_Not_Create);
@@ -133,7 +141,7 @@ namespace Sales.BLL.Services
                 UpdateUser.Email = userMap.Email;
                 UpdateUser.IdRole = userMap.IdRole;
                 UpdateUser.Password = userMap.Password;
-                //UpdateUser.PasswordHash = BCrypt.Net.BCrypt.HashPassword(userMap.Password);
+                UpdateUser.PasswordHash = _service.Hash(userMap.Password);
                 UpdateUser.IsActive = userMap.IsActive;
 
                 bool updated = await _repository.Update(UpdateUser);
